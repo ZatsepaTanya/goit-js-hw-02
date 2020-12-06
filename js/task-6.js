@@ -1,3 +1,33 @@
+let input;
+const numbers = [];
+let total = 0;
+while(input!==null){
+    input = prompt("Введите число");
+
+    input = Number(input);
+    const notANumber = Number.isNaN(input);
+    if (notANumber){
+    alert('Было введено не число, попробуйте еще раз');
+    continue;
+    }
+    
+    
+    numbers.push(+input);
+    console.log(numbers);
+    if( input === null){
+        
+             
+    
+    for(let i=0; i< numbers.length; i+=1){
+        total+=numbers[i];
+
+    }
+    console.log(`Общая сумма чисел равна ${total}`);
+    break;
+    
+    }
+
+    }
 
 
 // Напиши скрипт со следующим функционалом:
@@ -14,6 +44,3 @@
 //  текстом 'Было введено не число, попробуйте еще раз', при этом результат prompt записывать
 //   в массив чисел не нужно, после чего снова пользователю предлагается ввести число в prompt.
 
-// let input;
-// const numbers = [];
-// let total = 0;
