@@ -6,10 +6,10 @@ for (let i=1; i<words.length; i+=1){
         longestWord = words[i];
     }   
 }
-console.log(longestWord); 
 return longestWord;
 }
+console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); 
 
-findLongestWord('The quick brown fox jumped over the lazy dog');
-findLongestWord('Google do a roll');
-findLongestWord('May the force be with you');
+console.log(findLongestWord('Google do a roll')); 
+
+console.log(findLongestWord('May the force be with you')); 

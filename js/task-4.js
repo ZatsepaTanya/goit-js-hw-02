@@ -1,19 +1,21 @@
 const formatString = function(string){
-    const elements = string.split('');
-    if ( elements.length <= 40 ) {
-        console.log(string);
+
+    let elements = string.slice(0,40);
+    if(string.length>40){
+        elements = elements+"...";
     }
-    else{
-        elements.splice(40);
-        elements.push("...");
-        const result = elements.join('');
-        console.log(result);
-    }
+    return elements;
+    
 } 
-formatString('Curabitur ligula sapien, tincidunt non.');
-formatString('Vestibulum facilisis, purus nec pulvinar iaculis.');
-formatString('Curabitur ligula sapien.');
-formatString('Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.');
+console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
 
+console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
 
+console.log(formatString('Curabitur ligula sapien.'));
+
+console.log(
+  formatString(
+    'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
+  ),
+);
 
